@@ -9,7 +9,7 @@ Description: Fix various issues found in desktop menu entry file
 Forwarded: https://sourceforge.net/apps/trac/supertuxkart/ticket/632
 Bug-Debian: http://bugs.debian.org/667640
 Bug-Ubuntu: https://bugs.launchpad.net/bugs/709987
-Last-Update: 05-10-2012
+Last-Update: 2012-12-06
 
 --- a/data/supertuxkart_desktop.template
 +++ b/data/supertuxkart_desktop.template
@@ -17,9 +17,7 @@ Last-Update: 05-10-2012
  [Desktop Entry]
 -Encoding=UTF-8
  Name=SuperTuxKart
--Version=VERSION
--Icon=PREFIX/share/pixmaps/supertuxkart_64.xpm
-+Version=1.0
+-Icon=@PREFIX@/share/pixmaps/supertuxkart_64.xpm
 +Icon=supertuxkart
  GenericName=A kart racing game
 -GenericName[de_DE]=Ein Kart-Rennspiel
@@ -28,13 +26,12 @@ Last-Update: 05-10-2012
 +GenericName[fr]=Un jeu de karting
  GenericName[gl]=Xogo de carreiras con karts
 -GenericName[ro_RO]=Un joc de curse cu carturi
--Exec=PREFIX/games/supertuxkart --log=file
+-Exec=@PREFIX@/games/supertuxkart --log=file
 +GenericName[ro]=Un joc de curse cu carturi
 +Exec=supertuxkart --log=file
  Terminal=false
  StartupNotify=false
  Type=Application
--TryExec=PREFIX/games/supertuxkart
+-TryExec=@PREFIX@/games/supertuxkart
 +TryExec=supertuxkart
  Categories=Game;ArcadeGame;
-\ No newline at end of file
