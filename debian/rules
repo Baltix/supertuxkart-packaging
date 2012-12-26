@@ -16,6 +16,8 @@ override_dh_auto_configure:
 	dh_auto_configure
 
 override_dh_auto_build:
+	# Compile internal Irrlicht library (modified for STK) first
+	cd lib/irrlicht/source/Irrlicht && NDEBUG=1 make
 	# Generate manual page
 	docbook-to-man debian/supertuxkart.sgml > debian/supertuxkart.6
 	
