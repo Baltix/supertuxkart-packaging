@@ -1,0 +1,21 @@
+Description: Change install paths - STK_INSTALL_BINARY_DIR to "games" and STK_INSTALL_DATA_DIR "share/games/supertuxkart"
+Forwarded:   not-yet
+Author:      Vincent Cheng <Vincentc1208@gmail.com>
+Reviewed-by: Mantas Kriaučiūnas <mantas@akl.lt>
+Last-Update: 2012-12-26
+Index: supertuxkart-packaging-master/CMakeLists.txt
+===================================================================
+--- supertuxkart-packaging-master.orig/CMakeLists.txt  2012-12-26 15:54:27.000000000 +0200
++++ supertuxkart-packaging-master/CMakeLists.txt	2012-12-26 16:28:43.239603425 +0200
+@@ -19,9 +19,9 @@
+ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
+ 
+ # Define install paths
+-set(STK_INSTALL_BINARY_DIR "bin" CACHE
++set(STK_INSTALL_BINARY_DIR "games" CACHE
+     STRING "Install executable to this directory, absolute or relative to CMAKE_INSTALL_PREFIX")
+-set(STK_INSTALL_DATA_DIR "share/supertuxkart" CACHE
++set(STK_INSTALL_DATA_DIR "share/games/supertuxkart" CACHE
+     STRING "Install data folder to this directory, absolute or relative to CMAKE_INSTALL_PREFIX")
+ 
+ # Build the Bullet physics library
